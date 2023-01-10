@@ -56,7 +56,7 @@ const getCollegeDetails = async function (req, res) {
     if (collegeName.trim() == "") return res.status(400).send({ status: false, message: "College name can not be empty" })
     if (!validator.isAlphanumeric(collegeName, "en-US", { ignore: '-' })) return res.status(400).send({ status: false, message: "Invalid college name " })
     const checkCollege = await collegeModel.findOne({ name: collegeName });
-    if (!checkCollege) return res.status(200).send({ status: false, message: "No college exists with this college name " });
+    if (!checkCollege) return res.status(400).send({ status: false, message: "No college exists with this college name " });
     const { name, fullName, logoLink } = checkCollege;
     const newData = { name: name, fullName: fullName, logoLink: logoLink };
     const collegeId = checkCollege._id;
