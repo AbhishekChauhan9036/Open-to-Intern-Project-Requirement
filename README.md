@@ -130,7 +130,7 @@ Refer below sample
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to the Song Playlist App, please follow these steps:
+Contributions are welcome! If you'd like to contribute to the Open to Intern Project, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
